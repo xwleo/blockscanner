@@ -35,24 +35,27 @@ BlockScanner uses a TOML configuration file located at `config/default.toml`. Th
 
 Here's an example of the configuration file structure:<br/>
 
-toml<br/>
-[tron]<br/>
-api_url = "https://api.trongrid.io"<br/>
+### Toml
+
+```xml
+[tron]
+api_url = "https://api.trongrid.io"
 start_block = 65766023
 
-[bsc]<br/>
-api_url = "https://bsc-dataseed.binance.org"<br/>
+[bsc]
+api_url = "https://bsc-dataseed.binance.org"
 start_block = 20000000
-<br/><br/>
-[scheduler]<br/>
-interval_seconds = 10<br/>
 
-[log]<br/>
-level = "info"<br/>
-output = "console"<br/>
-format = "json"<br/>
-file_path = "logs"<br/>
+[scheduler]
+interval_seconds = 10
+
+[log]
+level = "info"
+output = "console"
+format = "json"
+file_path = "logs"
 file_name = "log"
+```
 
 Configuration options:
 
