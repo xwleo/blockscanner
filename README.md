@@ -1,6 +1,6 @@
-# XWScanner - Multi-Chain Block Scanner
+# BlockScanner - Multi-Chain Block Scanner
 
-XWScanner is a powerful and efficient multi-chain block scanner currently supporting TRON and BSC blockchains. It offers a robust solution for scanning blocks, parsing transactions, and providing flexible filtering capabilities, all while maintaining high performance and ease of use.
+BlockScanner is a powerful and efficient multi-chain block scanner currently supporting TRON and BSC blockchains. It offers a robust solution for scanning blocks, parsing transactions, and providing flexible filtering capabilities, all while maintaining high performance and ease of use.
 
 ## Key Components
 
@@ -31,22 +31,28 @@ XWScanner is a powerful and efficient multi-chain block scanner currently suppor
 
 ### Configuration
 
-XWScanner uses a TOML configuration file located at `config/default.toml`. This file allows you to customize the behavior of the scanner for each supported blockchain.
+BlockScanner uses a TOML configuration file located at `config/default.toml`. This file allows you to customize the behavior of the scanner for each supported blockchain.
 
-Here's an example of the configuration file structure:
-toml
-[tron]
-api_url = "https://api.trongrid.io"
+Here's an example of the configuration file structure:<br/>
+
+toml<br/>
+[tron]<br/>
+api_url = "https://api.trongrid.io"<br/>
 start_block = 65766023
-[bsc]
-api_url = "https://bsc-dataseed.binance.org"
+
+[bsc]<br/>
+api_url = "https://bsc-dataseed.binance.org"<br/>
 start_block = 20000000
-[log]
-level = "info"
-file = "scanner.log"
-[filter]
-addresses = ["TRonAddressHere", "BSCAddressHere"]
-contract_addresses = ["TRonContractAddressHere", "BSCContractAddressHere"]
+<br/><br/>
+[scheduler]<br/>
+interval_seconds = 10<br/>
+
+[log]<br/>
+level = "info"<br/>
+output = "console"<br/>
+format = "json"<br/>
+file_path = "logs"<br/>
+file_name = "log"
 
 Configuration options:
 
